@@ -162,7 +162,11 @@ L({
 <tr><td><code>&lt;=</code></td><td>menor o igual</td><td><code>&gt;=</code></td><td>mayor o igual</td></tr></table>
 <pre><code>int vida = 60;
 System.out.println("vida > 50: " + (vida > 50));   // true</code></pre>
-<div class="note">📝 <code>=</code> asigna y <code>==</code> compara: confundirlos es el error más típico. Y en un texto, la comparación necesita paréntesis.</div>`,
+<div class="note">📝 <code>=</code> asigna y <code>==</code> compara: confundirlos es el error más típico.</div>
+<p><b>Ojo con los paréntesis.</b> Si mezclas un texto con una comparación, la comparación tiene que ir <b>entre paréntesis</b> <code>( )</code>:</p>
+<pre><code>System.out.println("vida > 50: " + (vida > 50));   // ✔ correcto: true
+System.out.println("vida > 50: " + vida > 50);     // ✘ error</code></pre>
+<p>Sin paréntesis, Java primero junta el texto con la variable (<code>"vida > 50: 60"</code>) y luego intenta hacer <code>texto &gt; 50</code>, que no tiene sentido. Los paréntesis le dicen: «calcula antes esto». Vale igual para <code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code>, <code>&gt;=</code>, <code>==</code> y <code>!=</code>. Y no olvides cerrar todos los <code>(</code> con su <code>)</code>.</p>`,
   task: 'Declara <code>int vida = 60</code> y <code>int danio = 75</code>. Imprime estas seis líneas con las comparaciones: <code>vida &gt; danio: false</code>, <code>vida &lt; danio: true</code>, <code>vida == danio: false</code>, <code>vida != danio: true</code>, <code>vida &gt;= 60: true</code>, <code>danio &lt;= 70: false</code>.',
   mode: 'script',
   starter: `// Declara vida y danio.\n// Imprime cada comparación: System.out.println("vida > danio: " + (vida > danio));\n`,

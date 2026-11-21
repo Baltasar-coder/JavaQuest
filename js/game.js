@@ -209,6 +209,7 @@ const EXPL = [
   [/has private access/, () => 'Ese atributo/método es <code>private</code>: solo se puede usar dentro de su propia clase. Usa un getter/setter.'],
   [/non-static (variable|method).*static context/, () => 'Estás usando algo de un objeto (no estático) desde un método <code>static</code>. Crea un objeto o haz el miembro <code>static</code>.'],
   [/cannot be applied to given types|cannot be applied/, () => 'Estás llamando a un constructor/método con argumentos que no coinciden con los que declara.'],
+  [/bad operand types for binary operator '(<=|>=|<|>|==|!=)'[\s\S]*first type:\s+String/, m => 'Estás comparando con <code>' + m[1].replace(/</g, '&lt;').replace(/>/g, '&gt;') + '</code> un <b>texto</b>: Java hace primero el <code>+</code> (junta el texto con el número) y después intenta comparar el resultado, y eso no se puede. <b>Mira si falta algún paréntesis</b>: la comparación va entre paréntesis, así: <code>"vida &gt; danio: " + (vida &gt; danio)</code>. Tienes más detalles en la pestaña <b>Lección</b>.'],
   [/bad operand types/, () => 'Ese operador no se puede usar con esos tipos (por ejemplo, restar textos o usar <code>&amp;&amp;</code> con números).'],
   [/cannot assign a value to final variable/, () => 'Es <code>final</code> (constante): no se puede cambiar una vez asignada.'],
   [/invalid method declaration; return type required/, () => 'Falta el tipo de retorno del método (<code>void</code>, <code>int</code>...).'],
