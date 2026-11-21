@@ -1,0 +1,12 @@
+﻿Fondos ilustrados de los combates (opcional)
+============================================
+Un archivo por mundo, con el nombre del tema:
+
+  crypt.jpg      (Mundo 1 - Cripta)         <- ya incluido
+  forest.jpg     (Mundo 2 - Bosque)
+  catacomb.jpg   (Mundo 3 - Catacumbas)
+  tower.jpg      (Mundo 4 - Torre)
+  fortress.jpg   (Mundo 5 - Fortaleza)
+
+Si existe el archivo, se usa como fondo de los combates de ese mundo (los monstruos se colocan delante).
+Si no existe, se usa el terreno 3D de siempre. Recarga con Ctrl+F5 para verlo.

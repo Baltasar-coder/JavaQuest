@@ -1,0 +1,10 @@
+﻿Sprites ilustrados (opcional)
+=============================
+Pon aquí PNG con FONDO TRANSPARENTE, con el personaje mirando a la DERECHA:
+
+  goblin.png   wolf.png   troll.png   skeleton.png
+  mage.png     (el esqueleto mago: hechiceros / humanoides)
+  dragon.png   thief.png  hero.png
+
+Los que falten se siguen dibujando con los personajes vectoriales del juego.
+Recarga la página (Ctrl+F5) para verlos.
