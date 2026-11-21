@@ -887,7 +887,7 @@ async function victory(res) {
 const SK = GAME.SKILLS, BOOKS = GAME.BOOKS, DROPS = GAME.DROPS;
 const KIND_BOOK = { truco: '💡 Truco', leccion: '📘 Lección', reto: '📝 Reto de examen' };
 const kindLabel = k => KIND_BOOK[k] || k;
-const heroClass = () => (S.hero || 'warrior_f').split('_')[0];
+const heroClass = () => ((S && S.hero) || 'warrior_f').split('_')[0];
 const skillDef = type => { const c = SK.classes[heroClass()][type]; return Object.assign({ type, name: c[0], icon: c[1] }, SK.types[type]); };
 const atkIcon = () => ({ warrior: 'swords', mage: 'orb', archer: 'bow', cleric: 'sparkle' })[heroClass()] || 'swords';   // el icono del ataque básico depende de la clase
 const knownSkill = t => !!(SK.types[t].basic || (S.learned && S.learned[t]));
